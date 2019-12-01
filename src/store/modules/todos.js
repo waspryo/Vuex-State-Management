@@ -12,10 +12,11 @@ const actions = {
           'https://jsonplaceholder.typicode.com/todos'
         );
         commit('setTodos', res.data);
-        console.log(res.data)
   }
 };
-const mutations = {};
+const mutations = {
+    setTodos: (state, todos) => (state.todos = todos)
+};
 
 export default {
   state,
